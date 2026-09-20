@@ -1,0 +1,84 @@
+.toast-container {
+  position: fixed !important;
+  bottom: 28px !important;
+  right: 28px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  z-index: 9999 !important;
+  pointer-events: none !important;
+}
+
+.toast {
+  pointer-events: auto !important;
+  background: rgba(17, 28, 42, 0.92) !important;
+  background-color: #111C2A !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  border-radius: 14px !important;
+  padding: 14px 20px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  min-width: 280px !important;
+  max-width: 420px !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  animation: toastIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  color: #FFFFFF !important;
+  letter-spacing: -0.2px !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+@keyframes toastIn {
+  from {
+    transform: translateY(16px) scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.toast--success {
+  border-left: 3.5px solid #10B981 !important;
+}
+.toast--success .toast-icon {
+  color: #34D399 !important;
+  filter: drop-shadow(0 0 6px rgba(52, 211, 153, 0.45)) !important;
+}
+
+.toast--error {
+  border-left: 3.5px solid #F87171 !important;
+}
+.toast--error .toast-icon {
+  color: #F87171 !important;
+  filter: drop-shadow(0 0 6px rgba(248, 113, 113, 0.45)) !important;
+}
+
+.toast--info {
+  border-left: 3.5px solid #38BDF8 !important;
+}
+.toast--info .toast-icon {
+  color: #38BDF8 !important;
+  filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.45)) !important;
+}
+
+.toast--warning {
+  border-left: 3.5px solid #FBBF24 !important;
+}
+.toast--warning .toast-icon {
+  color: #FBBF24 !important;
+  filter: drop-shadow(0 0 6px rgba(251, 191, 36, 0.45)) !important;
+}
+
+.toast-icon {
+  font-size: 16px !important;
+  flex-shrink: 0 !important;
+  display: grid !important;
+  place-items: center !important;
+}

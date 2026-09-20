@@ -1,0 +1,345 @@
+.login-page {
+  min-height: 100vh !important;
+  width: 100vw !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  position: relative !important;
+  z-index: 1 !important;
+  padding: 32px 20px !important;
+  background-color: #080D14 !important;
+  overflow: hidden !important;
+  box-sizing: border-box !important;
+  font-family: 'Plus Jakarta Sans', -apple-system, sans-serif !important;
+}
+
+/* Subtle background textures */
+.login-ambient-grid {
+  position: fixed !important;
+  inset: 0 !important;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px) !important;
+  background-size: 40px 40px !important;
+  mask-image: radial-gradient(circle at 50% 50%, black 40%, transparent 90%) !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+
+.login-glow-center {
+  position: absolute !important;
+  width: 500px !important;
+  height: 500px !important;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, rgba(11, 28, 42, 0.05) 50%, transparent 70%) !important;
+  top: 45% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  filter: blur(60px) !important;
+}
+
+.login-glow-bottom {
+  position: absolute !important;
+  width: 350px !important;
+  height: 200px !important;
+  background: radial-gradient(ellipse, rgba(56, 189, 248, 0.08) 0%, transparent 70%) !important;
+  bottom: 0 !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  pointer-events: none !important;
+  filter: blur(50px) !important;
+}
+
+.login-wrap {
+  position: relative !important;
+  z-index: 2 !important;
+  width: 440px !important;
+  max-width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+/* Header & Logo */
+.login-header {
+  text-align: center !important;
+  margin-bottom: 28px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.login-logo-container {
+  position: relative !important;
+  width: 72px !important;
+  height: 72px !important;
+  background: rgba(17, 28, 42, 0.8) !important;
+  border: 1px solid rgba(52, 211, 153, 0.3) !important;
+  border-radius: 22px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 16px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  padding: 10px !important;
+  box-sizing: border-box !important;
+}
+
+.logo-glow {
+  position: absolute !important;
+  inset: -2px !important;
+  border-radius: 24px !important;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.4), transparent, rgba(56, 189, 248, 0.3)) !important;
+  z-index: -1 !important;
+  opacity: 0.6 !important;
+}
+
+.logo-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  border-radius: 12px !important;
+}
+
+.login-pill {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 7px !important;
+  background: rgba(16, 185, 129, 0.08) !important;
+  border: 1px solid rgba(52, 211, 153, 0.22) !important;
+  padding: 5px 14px !important;
+  border-radius: 30px !important;
+  margin-bottom: 12px !important;
+}
+
+.login-pulse-dot {
+  width: 6px !important;
+  height: 6px !important;
+  border-radius: 50% !important;
+  background: #10B981 !important;
+  box-shadow: 0 0 10px #34D399 !important;
+  animation: pulse-dot 2s infinite ease-in-out !important;
+}
+
+.login-pill-text {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 9.5px !important;
+  color: #34D399 !important;
+  font-weight: 800 !important;
+  letter-spacing: 1.5px !important;
+}
+
+.login-title {
+  font-size: 32px !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.8px !important;
+  color: #FFFFFF !important;
+  line-height: 1.1 !important;
+  margin: 0 0 6px 0 !important;
+}
+
+.title-highlight {
+  background: linear-gradient(135deg, #34D399 0%, #10B981 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.login-subtitle {
+  font-size: 13px !important;
+  color: #94A3B8 !important;
+  font-weight: 500 !important;
+  margin: 0 !important;
+}
+
+/* Card Styles */
+.login-card {
+  width: 100% !important;
+  position: relative !important;
+  background: rgba(17, 28, 42, 0.75) !important;
+  border: 1px solid rgba(255, 255, 255, 0.09) !important;
+  border-radius: 24px !important;
+  padding: 34px !important;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+  backdrop-filter: blur(16px) !important;
+  box-sizing: border-box !important;
+  overflow: hidden !important;
+}
+
+.card-ambient-light {
+  position: absolute !important;
+  top: 0 !important;
+  left: 20% !important;
+  right: 20% !important;
+  height: 1px !important;
+  background: linear-gradient(90deg, transparent, rgba(52, 211, 153, 0.5), transparent) !important;
+}
+
+.form-group {
+  margin-bottom: 20px !important;
+}
+
+.form-label {
+  display: flex !important;
+  justify-content: space-between !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 10px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.5px !important;
+  color: #94A3B8 !important;
+  margin-bottom: 9px !important;
+  font-weight: 700 !important;
+}
+
+/* Dark Input Fields */
+.input-box {
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+}
+
+.input-icon {
+  position: absolute !important;
+  left: 16px !important;
+  color: #64748B !important;
+  font-size: 17px !important;
+  pointer-events: none !important;
+  z-index: 2 !important;
+  transition: color 0.2s !important;
+}
+
+.input-box:focus-within .input-icon {
+  color: #34D399 !important;
+}
+
+.form-input {
+  width: 100% !important;
+  padding: 14px 16px 14px 46px !important;
+  background: #0D1622 !important;
+  background-color: #0D1622 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 14px !important;
+  color: #FFFFFF !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  outline: none !important;
+  box-sizing: border-box !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3) !important;
+}
+
+.form-input::placeholder {
+  color: #475569 !important;
+  font-weight: 500 !important;
+}
+
+.form-input:focus {
+  border-color: rgba(52, 211, 153, 0.5) !important;
+  background: #111C2A !important;
+  background-color: #111C2A !important;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15), inset 0 2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+.pw-toggle-btn {
+  position: absolute !important;
+  right: 14px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  background: none !important;
+  border: none !important;
+  color: #64748B !important;
+  cursor: pointer !important;
+  padding: 6px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 8px !important;
+  transition: all 0.15s ease !important;
+}
+
+.pw-toggle-btn:hover {
+  color: #E2E8F0 !important;
+  background: rgba(255, 255, 255, 0.05) !important;
+}
+
+/* Error Banner */
+.login-error-banner {
+  display: flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  background: rgba(248, 113, 113, 0.1) !important;
+  border: 1px solid rgba(248, 113, 113, 0.25) !important;
+  border-radius: 12px !important;
+  padding: 12px 16px !important;
+  color: #FCA5A5 !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  margin-bottom: 22px !important;
+  line-height: 1.4 !important;
+}
+
+.error-icon {
+  color: #F87171 !important;
+  flex-shrink: 0 !important;
+}
+
+/* Submit Button */
+.btn-submit {
+  width: 100% !important;
+  padding: 15px 20px !important;
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%) !important;
+  color: #FFFFFF !important;
+  border: none !important;
+  border-radius: 14px !important;
+  font-size: 14.5px !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+  margin-top: 8px !important;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background: linear-gradient(135deg, #34D399 0%, #10B981 100%) !important;
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.5) !important;
+  transform: translateY(-1.5px) !important;
+}
+
+.btn-submit:active:not(:disabled) {
+  transform: translateY(0.5px) !important;
+}
+
+.btn-submit:disabled {
+  opacity: 0.55 !important;
+  cursor: not-allowed !important;
+}
+
+.submit-spinner {
+  width: 18px !important;
+  height: 18px !important;
+  border: 2.5px solid rgba(255, 255, 255, 0.2) !important;
+  border-top-color: #FFFFFF !important;
+  border-radius: 50% !important;
+  animation: spin 0.6s linear infinite !important;
+}
+
+/* Footer */
+.login-footer {
+  margin-top: 26px !important;
+}
+
+.footer-status {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 10.5px !important;
+  color: #64748B !important;
+  letter-spacing: 0.6px !important;
+  font-weight: 600 !important;
+}

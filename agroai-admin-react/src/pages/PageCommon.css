@@ -1,0 +1,236 @@
+.page {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  min-height: 0 !important;
+  overflow-y: auto !important;
+  animation: pageIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  background: var(--bg, #0B131E) !important;
+  background-color: #0B131E !important;
+  box-sizing: border-box !important;
+}
+
+.page-content {
+  padding: 32px 36px !important;
+  flex: 1 !important;
+  max-width: 1600px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+.page-header {
+  display: flex !important;
+  align-items: flex-start !important;
+  justify-content: space-between !important;
+  margin-bottom: 26px !important;
+  gap: 16px !important;
+  flex-wrap: wrap !important;
+}
+
+.page-title {
+  font-size: 26px !important;
+  font-weight: 800 !important;
+  letter-spacing: -0.6px !important;
+  line-height: 1.15 !important;
+  color: var(--text, #FFFFFF) !important;
+  margin: 0 !important;
+}
+
+.page-subtitle {
+  font-size: 13px !important;
+  color: var(--text2, #94A3B8) !important;
+  margin-top: 5px !important;
+  font-weight: 500 !important;
+}
+
+.stats-grid-3 {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 20px !important;
+  margin-bottom: 26px !important;
+}
+
+.stats-grid-4 {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 20px !important;
+  margin-bottom: 26px !important;
+}
+
+/* User Detail Hero */
+.user-detail-hero {
+  display: flex !important;
+  align-items: center !important;
+  gap: 18px !important;
+  margin-bottom: 24px !important;
+  padding-bottom: 20px !important;
+  border-bottom: 1px solid var(--border, rgba(255, 255, 255, 0.08)) !important;
+}
+
+.user-detail-ava {
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 16px !important;
+  background: rgba(16, 185, 129, 0.15) !important;
+  border: 1.5px solid var(--accent, #10B981) !important;
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.25) !important;
+  display: grid !important;
+  place-items: center !important;
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  color: var(--accent2, #34D399) !important;
+  flex-shrink: 0 !important;
+}
+
+/* Device Chip */
+.device-chip {
+  background: var(--surface2, #162334) !important;
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.08)) !important;
+  border-radius: var(--radius, 12px) !important;
+  padding: 14px 18px !important;
+  margin-bottom: 12px !important;
+  transition: border-color 0.15s ease !important;
+}
+
+.device-chip:hover {
+  border-color: rgba(52, 211, 153, 0.3) !important;
+}
+
+.device-chip-id {
+  font-family: 'JetBrains Mono', monospace !important;
+  color: var(--accent2, #34D399) !important;
+  font-size: 13.5px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.5px !important;
+}
+
+.section-label {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 10px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 2px !important;
+  color: var(--text3, #64748B) !important;
+  margin-bottom: 12px !important;
+  font-weight: 700 !important;
+  display: block !important;
+}
+
+/* Chat Bubbles */
+.chat-view {
+  padding: 20px !important;
+  background: var(--surface2, #162334) !important;
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.08)) !important;
+  border-radius: var(--radius, 12px) !important;
+}
+
+.chat-row {
+  margin-bottom: 18px !important;
+}
+
+.chat-sender {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 10px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.5px !important;
+  margin-bottom: 6px !important;
+  font-weight: 700 !important;
+}
+
+.chat-sender.user {
+  color: var(--text3, #64748B) !important;
+}
+
+.chat-sender.bot {
+  color: var(--accent2, #34D399) !important;
+  text-align: right !important;
+}
+
+.chat-row.bot-row {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+}
+
+.bubble-user {
+  background: #0D1622 !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 16px 16px 16px 4px !important;
+  padding: 14px 18px !important;
+  font-size: 13.5px !important;
+  line-height: 1.55 !important;
+  max-width: 88% !important;
+  color: var(--text, #FFFFFF) !important;
+}
+
+.bubble-bot {
+  background: rgba(16, 185, 129, 0.12) !important;
+  border: 1px solid rgba(52, 211, 153, 0.3) !important;
+  border-radius: 16px 16px 4px 16px !important;
+  padding: 14px 18px !important;
+  font-size: 13.5px !important;
+  line-height: 1.55 !important;
+  max-width: 88% !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.15) !important;
+}
+
+/* Chart Bars */
+.chart-bar-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  margin-bottom: 14px !important;
+}
+
+.chart-label {
+  width: 150px !important;
+  font-size: 12.5px !important;
+  text-align: right !important;
+  color: var(--text2, #94A3B8) !important;
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  font-weight: 600 !important;
+}
+
+.chart-track {
+  flex: 1 !important;
+  height: 8px !important;
+  background: #0D1622 !important;
+  border-radius: 10px !important;
+  overflow: hidden !important;
+  border: 1px solid var(--border, rgba(255, 255, 255, 0.08)) !important;
+}
+
+.chart-fill {
+  height: 100% !important;
+  background: linear-gradient(90deg, #10B981, #34D399) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.4) !important;
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.chart-count {
+  width: 36px !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 11.5px !important;
+  color: var(--text3, #64748B) !important;
+  font-weight: 700 !important;
+}
+
+@media (max-width: 1024px) {
+  .stats-grid-3, .stats-grid-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-content {
+    padding: 20px 16px !important;
+  }
+  .stats-grid-3, .stats-grid-4 {
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+}

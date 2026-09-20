@@ -1,0 +1,83 @@
+.stat-card {
+  background: #111C2A !important;
+  background-color: #111C2A !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 18px !important;
+  padding: 22px 24px !important;
+  position: relative !important;
+  overflow: hidden !important;
+  backdrop-filter: blur(14px) !important;
+  -webkit-backdrop-filter: blur(14px) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.05) !important;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  cursor: default !important;
+}
+
+.stat-card:hover {
+  border-color: rgba(52, 211, 153, 0.35) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(16, 185, 129, 0.12) !important;
+  transform: translateY(-3px) !important;
+}
+
+.stat-card::after {
+  content: attr(data-icon);
+  position: absolute;
+  right: 18px;
+  top: 16px;
+  font-size: 32px;
+  opacity: 0.08;
+  pointer-events: none;
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.2));
+}
+
+.stat-label {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 10.5px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.8px !important;
+  color: #94A3B8 !important;
+  margin-bottom: 12px !important;
+  font-weight: 700 !important;
+}
+
+.stat-value {
+  font-size: 38px !important;
+  font-weight: 900 !important;
+  letter-spacing: -1.5px !important;
+  line-height: 1 !important;
+  font-feature-settings: "tnum" 1 !important;
+}
+
+.stat-value--accent {
+  color: #34D399 !important;
+  text-shadow: 0 0 18px rgba(52, 211, 153, 0.35) !important;
+}
+
+.stat-value--info {
+  color: #38BDF8 !important;
+  text-shadow: 0 0 18px rgba(56, 189, 248, 0.35) !important;
+}
+
+.stat-value--warning {
+  color: #FBBF24 !important;
+  text-shadow: 0 0 18px rgba(251, 191, 36, 0.35) !important;
+}
+
+.stat-value--danger {
+  color: #F87171 !important;
+  text-shadow: 0 0 18px rgba(248, 113, 113, 0.35) !important;
+}
+
+.stat-value--white {
+  color: #FFFFFF !important;
+}
+
+.stat-sub {
+  font-size: 12px !important;
+  color: #64748B !important;
+  margin-top: 8px !important;
+  font-weight: 500 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 5px !important;
+}
